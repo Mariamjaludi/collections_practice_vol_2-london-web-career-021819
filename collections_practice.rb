@@ -81,11 +81,11 @@ def count_elements(array)
 end
 
 def merge_data(keys, data)
-  
+
   keys.each do |hash|
     data.each do |attributes|
-      hash.merge!(attributes[hash[:first_name]]) 
-    end 
+      hash.merge!(attributes[hash[:first_name]])
+    end
   end
 end
 =begin
@@ -95,7 +95,7 @@ keys = [{:first_name=>"blake", :motto=>"Have a koala-ty day!"},
 data = [{"ashley"=>{:awesomeness=>9, :height=>60, :last_name=>"dubs"}, "blake"=>{:awesomeness=>10, :height=>"74", :last_name=>"johnson"}}]
 =end
 def find_cool(cool)
-  
+
 end
 
 def organize_schools(schools)
