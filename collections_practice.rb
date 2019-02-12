@@ -127,7 +127,6 @@ end
 =end
 def organize_schools(schools)
   result = {}
-  array = []
 
   schools.each do |school, location|
     location.each do |key, val|
