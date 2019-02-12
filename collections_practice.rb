@@ -1,1 +1,106 @@
 # your code goes here
+require 'pry'
+def begins_with_r(array)
+  result = false
+  i = 0
+  while i < array.length
+    result = array[i].start_with?('r')
+    if result == false
+      return false
+    else
+      i += 1
+    end
+  end
+  result
+end
+
+def contain_a(array)
+  result = []
+  i = 0
+  j = 0
+  while i< array.length
+    if array[i].include?('a')
+      result[j] = array[i]
+      j += 1
+    end
+    i += 1
+  end
+  result
+end
+
+def first_wa(array)
+  result = []
+  i = 0
+
+  while i< array.length
+    x = array[i]
+    if x [0,2] == "wa"
+      return array[i]
+    end
+    i += 1
+  end
+end
+
+def remove_non_strings(array)
+  result = []
+  i = 0
+  j = 0
+
+  while i < array.length
+    if array[i].class == String
+      result[j] = array[i]
+      j += 1
+    end
+    i += 1
+  end
+  result
+end
+
+def count_elements(array)
+  result = []
+  i = 0
+  k = 0
+
+  while i < array.length
+    my_hash = {:name => "", :count => 0}
+    my_hash[:name] = array[i][:name]
+    my_hash[:count] = 1
+    j = i + 1
+    while j < array.length
+      if array[j][:name] == my_hash[:name]
+        my_hash[:count] += 1
+        i += 1
+      end
+      j += 1
+    end
+    result[k] = my_hash
+    i += 1
+    k += 1
+  end
+  result
+end
+
+def merge_data(keys, data)
+  result = []
+  data.each do |key|
+    key.each do |key, val|
+        binding.pry
+    end
+
+  end
+
+end
+
+=begin
+keys = [{:first_name=>"blake", :motto=>"Have a koala-ty day!"},
+{:first_name=>"ashley", :motto=>"I dub thee, 'Lady Brett Ashley'."}]
+
+data = [{"ashley"=>{:awesomeness=>9, :height=>60, :last_name=>"dubs"}, "blake"=>{:awesomeness=>10, :height=>"74", :last_name=>"johnson"}}]
+=end
+def find_cool(cool)
+
+end
+
+def organize_schools(schools)
+
+end
