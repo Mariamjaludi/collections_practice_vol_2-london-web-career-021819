@@ -130,8 +130,14 @@ def organize_schools(schools)
   array = []
 
   schools.each do |key, val|
+    temp = key
     val.each do |key2, val2|
-      array.push(val2)
+      if location_hash[] == nil
+        array.push(temp)
+        location_hash[key2] = array
+      else
+        location_hash[key2] = [temp]
+      end
     end
   end
 end
