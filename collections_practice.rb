@@ -84,7 +84,7 @@ def merge_data(keys, data)
   result = []
   data.each do |key|
     key.each do |key, val|
-        binding.pry
+        #binding.pry
     end
 
   end
