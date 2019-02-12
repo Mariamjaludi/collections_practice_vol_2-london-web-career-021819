@@ -131,7 +131,7 @@ def organize_schools(schools)
   schools.each do |school, location|
     location.each do |key, val|
       binding.pry
-      if result[] == nil
+      if result[val] == nil
         result[val] = [school]
       else
         result[val].push(school)
