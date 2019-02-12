@@ -96,6 +96,11 @@ data = [{"ashley"=>{:awesomeness=>9, :height=>60, :last_name=>"dubs"}, "blake"=>
 =end
 def find_cool(cool)
 
+  cool.select do |val|
+    if val.has_value?("cool")
+      val
+    end
+  end
 end
 
 def organize_schools(schools)
